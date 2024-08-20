@@ -30,12 +30,11 @@ publishing {
             artifactId = 'htmltextview'
             version = '5.0'
 
-            // Specify the AAR file
             artifact("$buildDir/outputs/aar/${project.name}-release.aar")
         }
     }
     repositories {
-        mavenLocal()
+        maven { url 'https://jitpack.io' }
     }
 }
 
