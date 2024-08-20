@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion 34
@@ -16,49 +15,6 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
 }
-
-//publishing {
-//    publications {
-//        release(MavenPublication) {
-////            from components.release // Ensure this matches the actual component name
-//
-////            groupId = 'org.sufficientlysecure'
-//            groupId = 'com.github.internyp'
-//            artifactId = 'html-textview'
-//            version = '4.0'
-//
-//            pom {
-//                name.set('HtmlTextView')
-//                description.set('HtmlTextView is an extended TextView component for Android, which can load HTML and converts it into Spannable for displaying it.')
-//                url.set('https://github.com/SufficientlySecure/html-textview')
-//                licenses {
-//                    license {
-//                        name.set('The Apache License, Version 2.0')
-//                        url.set('http://www.apache.org/licenses/LICENSE-2.0')
-//                    }
-//                }
-//                developers {
-//                    developer {
-//                        id.set('internyp')
-//                        name.set('internyp')
-//                        email.set('your.email@example.com')
-//                    }
-//                }
-//                scm {
-//                    connection.set('scm:git:git://github.com/SufficientlySecure/html-textview.git')
-//                    developerConnection.set('scm:git:ssh://github.com/SufficientlySecure/html-textview.git')
-//                    url.set('https://github.com/SufficientlySecure/html-textview')
-//                }
-//            }
-//        }
-//    }
-//
-//    repositories {
-//        maven {
-//            url = uri("https://jitpack.io")
-//        }
-//    }
-//}
 
 dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
