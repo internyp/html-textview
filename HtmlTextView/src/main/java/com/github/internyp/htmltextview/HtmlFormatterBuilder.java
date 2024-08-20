@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-package org.sufficientlysecure.htmltextview;
+package com.github.internyp.htmltextview;
 
 import android.text.Html.ImageGetter;
 import androidx.annotation.Nullable;

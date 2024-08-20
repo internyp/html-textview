@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-package org.sufficientlysecure.htmltextview;
+package com.github.internyp.htmltextview;
 
 import android.text.Editable;
 import android.text.Html;

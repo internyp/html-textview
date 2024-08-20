@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.sufficientlysecure.htmltextview.example">
+    package="com.github.internyp.htmltextview.example">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.github.internyp.htmltextview.example.MainActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
@@ -20,9 +20,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".WebViewActivity"
+            android:name="com.github.internyp.htmltextview.example.WebViewActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".DataBindingExampleActivity" />
+        <activity android:name="com.github.internyp.htmltextview.example.DataBindingExampleActivity" />
     </application>
 
 </manifest>

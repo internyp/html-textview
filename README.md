@@ -29,7 +29,7 @@ dependencies {
 ## Example
 
 ```java
-<org.sufficientlysecure.htmltextview.HtmlTextView
+<com.github.internyp.htmltextview.HtmlTextView
             android:id="@+id/html_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

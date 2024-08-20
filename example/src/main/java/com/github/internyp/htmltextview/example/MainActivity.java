@@ -14,26 +14,20 @@
  * limitations under the License.
  */
 
-package org.sufficientlysecure.htmltextview.example;
+package com.github.internyp.htmltextview.example;
+
+import static com.github.internyp.htmltextview.example.WebViewActivity.EXTRA_TABLE_HTML;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
+import android.view.*;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import org.sufficientlysecure.htmltextview.ClickableTableSpan;
-import org.sufficientlysecure.htmltextview.DrawTableLinkSpan;
-import org.sufficientlysecure.htmltextview.HtmlResImageGetter;
-import org.sufficientlysecure.htmltextview.HtmlTextView;
-import org.sufficientlysecure.htmltextview.OnClickATagListener;
-
-import static org.sufficientlysecure.htmltextview.example.WebViewActivity.EXTRA_TABLE_HTML;
+import com.github.internyp.htmltextview.*;
 
 public class MainActivity extends Activity {
 

@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 33
-    namespace 'org.sufficientlysecure.htmltextview.example'
+    namespace 'com.github.internyp.htmltextview.example'
 
     defaultConfig {
-        applicationId "org.sufficientlysecure.htmltextview.example"
+        applicationId "com.github.internyp.htmltextview.example"
         minSdkVersion 33
         targetSdkVersion 33
         versionCode 1

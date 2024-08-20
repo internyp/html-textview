@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.sufficientlysecure.htmltextview;
+package com.github.internyp.htmltextview;
 
 import android.content.res.Resources;
 import android.graphics.Bitmap;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.sufficientlysecure.htmltextview;
+package com.github.internyp.htmltextview;
 
 import android.content.Context;
 import android.text.Html;
@@ -61,14 +61,14 @@ public class HtmlTextView extends JellyBeanSpanFixTextView {
     }
 
     /**
-     * @see org.sufficientlysecure.htmltextview.HtmlTextView#setHtml(int)
+     * @see HtmlTextView#setHtml(int)
      */
     public void setHtml(@RawRes int resId) {
         setHtml(resId, null);
     }
 
     /**
-     * @see org.sufficientlysecure.htmltextview.HtmlTextView#setHtml(String)
+     * @see HtmlTextView#setHtml(String)
      */
     public void setHtml(@NonNull String html) {
         setHtml(html, null);

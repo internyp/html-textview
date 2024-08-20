@@ -7,7 +7,7 @@
 
         <variable
             name="newsItem"
-            type="org.sufficientlysecure.htmltextview.example.DataBindingExampleActivity.NewsItem" />
+            type="com.github.internyp.htmltextview.example.DataBindingExampleActivity.NewsItem" />
     </data>
 
     <LinearLayout
@@ -19,7 +19,7 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context=".DataBindingExampleActivity">
 
-        <org.sufficientlysecure.htmltextview.HtmlTextView
+        <com.github.internyp.htmltextview.HtmlTextView
             android:id="@+id/html_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

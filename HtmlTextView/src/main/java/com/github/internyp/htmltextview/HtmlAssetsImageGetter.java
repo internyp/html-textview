@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2014-2016 Dominik Schürmann <dominik@schuermann.eu>
- * Copyright (C) 2014 drawk
+ * Copyright (C) 2016 Daniel Passos <daniel@passos.me>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,41 +14,50 @@
  * limitations under the License.
  */
 
-package org.sufficientlysecure.htmltextview;
+package com.github.internyp.htmltextview;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.text.Html;
 import android.util.Log;
-import androidx.annotation.NonNull;
+import android.widget.TextView;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
- * Copied from http://stackoverflow.com/a/22298833
+ * Assets Image Getter
+ * <p>
+ * Load image from assets folder
+ *
+ * @author <a href="mailto:daniel@passos.me">Daniel Passos</a>
  */
-public class HtmlResImageGetter implements Html.ImageGetter {
-    private Context context;
+public class HtmlAssetsImageGetter implements Html.ImageGetter {
 
-    public HtmlResImageGetter(@NonNull Context context) {
+    private final Context context;
+
+    public HtmlAssetsImageGetter(Context context) {
         this.context = context;
     }
 
+    public HtmlAssetsImageGetter(TextView textView) {
+        this.context = textView.getContext();
+    }
+
+    @Override
     public Drawable getDrawable(String source) {
-        int id = context.getResources().getIdentifier(source, "drawable", context.getPackageName());
 
-        if (id == 0) {
-            // the drawable resource wasn't found in our package, maybe it is a stock android drawable?
-            id = context.getResources().getIdentifier(source, "drawable", "android");
-        }
-
-        if (id == 0) {
+        try {
+            InputStream inputStream = context.getAssets().open(source);
+            Drawable d = Drawable.createFromStream(inputStream, null);
+            d.setBounds(0, 0, d.getIntrinsicWidth(), d.getIntrinsicHeight());
+            return d;
+        } catch (IOException e) {
             // prevent a crash if the resource still can't be found
             Log.e(HtmlTextView.TAG, "source could not be found: " + source);
             return null;
-        } else {
-            Drawable d = context.getResources().getDrawable(id);
-            d.setBounds(0, 0, d.getIntrinsicWidth(), d.getIntrinsicHeight());
-            return d;
         }
+
     }
 
 }

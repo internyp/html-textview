@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.sufficientlysecure.htmltextview.example;
+package com.github.internyp.htmltextview.example;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -22,10 +22,8 @@ import androidx.annotation.Nullable;
 import androidx.databinding.BindingAdapter;
 import androidx.databinding.DataBindingUtil;
 
-import org.sufficientlysecure.htmltextview.DrawTableLinkSpan;
-import org.sufficientlysecure.htmltextview.HtmlResImageGetter;
-import org.sufficientlysecure.htmltextview.HtmlTextView;
-import org.sufficientlysecure.htmltextview.example.databinding.ActivityDataBindingExampleBinding;
+import com.github.internyp.htmltextview.*;
+import com.github.internyp.htmltextview.example.databinding.ActivityDataBindingExampleBinding;
 
 public class DataBindingExampleActivity extends Activity {
 
@@ -67,7 +65,7 @@ public class DataBindingExampleActivity extends Activity {
     /**
      * A plain old Java object that holds a HTML string.
      */
-    public static class NewsItem {
+    public static class NewsItem extends DataBindingExampleActivity {
 
         private String html;
 
