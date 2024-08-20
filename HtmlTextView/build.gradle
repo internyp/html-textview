@@ -2,11 +2,12 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 33
+    namespace 'org.sufficientlysecure.htmltextview'
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 29
+        minSdkVersion 33
+        targetSdkVersion 33
         versionName '4.0'
     }
 }
@@ -14,34 +15,33 @@ android {
 publishing {
     publications {
         release(MavenPublication) {
+//            from components.release // Ensure this matches the actual component name
+
             groupId = 'org.sufficientlysecure'
             artifactId = 'html-textview'
             version = '4.0'
 
-            
-            from components.release
-
             pom {
-                name = 'HtmlTextView'
-                description = 'HtmlTextView is an extended TextView component for Android, which can load HTML and converts it into Spannable for displaying it.'
-                url = 'https://github.com/SufficientlySecure/html-textview'
+                name.set('HtmlTextView')
+                description.set('HtmlTextView is an extended TextView component for Android, which can load HTML and converts it into Spannable for displaying it.')
+                url.set('https://github.com/SufficientlySecure/html-textview')
                 licenses {
                     license {
-                        name = 'The Apache License, Version 2.0'
-                        url = 'http://www.apache.org/licenses/LICENSE-2.0'
+                        name.set('The Apache License, Version 2.0')
+                        url.set('http://www.apache.org/licenses/LICENSE-2.0')
                     }
                 }
                 developers {
                     developer {
-                        id = 'internyp'
-                        name = 'internyp'
-                        email = 'your.email@example.com'
+                        id.set('internyp')
+                        name.set('internyp')
+                        email.set('your.email@example.com')
                     }
                 }
                 scm {
-                    connection = 'scm:git:git://github.com/SufficientlySecure/html-textview.git'
-                    developerConnection = 'scm:git:ssh://github.com/SufficientlySecure/html-textview.git'
-                    url = 'https://github.com/SufficientlySecure/html-textview'
+                    connection.set('scm:git:git://github.com/SufficientlySecure/html-textview.git')
+                    developerConnection.set('scm:git:ssh://github.com/SufficientlySecure/html-textview.git')
+                    url.set('https://github.com/SufficientlySecure/html-textview')
                 }
             }
         }
@@ -52,4 +52,8 @@ publishing {
             url = uri("https://jitpack.io")
         }
     }
+}
+
+dependencies {
+    implementation 'androidx.annotation:annotation:1.1.0'
 }
