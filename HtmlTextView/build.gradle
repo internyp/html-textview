@@ -1,4 +1,7 @@
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+}
 
 android {
     compileSdkVersion 34
@@ -18,4 +21,21 @@ android {
 
 dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
+}
+
+publishing {
+    publications {
+        // Creating a publication with the name "aar"
+        aar(MavenPublication) {
+            groupId = 'com.github.internyp'
+            artifactId = 'htmltextview'
+            version = '5.0'
+
+            // Specify the AAR file
+            artifact("$buildDir/outputs/aar/${project.name}-release.aar")
+        }
+    }
+    repositories {
+        mavenLocal()
+    }
 }
