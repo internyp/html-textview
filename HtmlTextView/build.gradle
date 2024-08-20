@@ -18,7 +18,7 @@ publishing {
             artifactId = 'html-textview'
             version = '4.0'
 
-            // ใช้ชื่อ component ที่ได้จากการรันคำสั่ง Gradle
+            
             from components.release
 
             pom {
