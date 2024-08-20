@@ -25,7 +25,6 @@ dependencies {
 
 publishing {
     publications {
-        // Creating a publication with the name "aar"
         aar(MavenPublication) {
             groupId = 'com.github.internyp'
             artifactId = 'htmltextview'
@@ -40,3 +39,6 @@ publishing {
     }
 }
 
+tasks.named('publishAarPublicationToMavenLocal').configure {
+    dependsOn tasks.named('bundleReleaseAar')
+}
